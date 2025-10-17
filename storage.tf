@@ -37,47 +37,5 @@ resource "aws_s3_object" "decoy_status_key" {
 resource "aws_s3_object" "final_flag_clue" {
   bucket  = aws_s3_bucket.app_data.id
   key     = "secrets/flag_part_2.txt" # This path matches the clue in compute.tf
-  content = "The final key has been moved to a secure location for tracking." 
+  content = "Key location was moved to the commit history for auditing. The key is now stored as a common hash type. See commit a1b2c3d for details."
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-See: https://github.com/your-username/your-repo/issues/1
