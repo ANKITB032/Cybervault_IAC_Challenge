@@ -21,6 +21,7 @@ resource "aws_s3_bucket_policy" "app_data_policy" {
 }
 
 # --- Internal bucket for development logs ---
+# Note: For legacy zipped assets, see Issue #1 for decryption keys. <-- ADD THIS HINT
 resource "aws_s3_bucket" "dev_logs" {
   bucket = "startup-dev-logs-98765"
 }
@@ -34,8 +35,8 @@ resource "aws_s3_object" "decoy_status_key" {
 
 # --- REAL FLAG PART 2 CLUE ---
 # This object is stored in the public bucket. Its content is the final breadcrumb.
-resource "aws_s3_object" "final_flag_clue" {
+resource "aws_s3_object" "964afa8" {
   bucket  = aws_s3_bucket.app_data.id
   key     = "secrets/flag_part_2.txt" # This path matches the clue in compute.tf
-  content = "Key location was moved to the commit history for auditing. The key is now stored as a common hash type. See commit a1b2c3d for details."
+  content = "Key location was moved to the commit history for auditing. The key is now stored as a common hash type. See commit 964afa8 for details."
 }
