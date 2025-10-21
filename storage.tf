@@ -30,7 +30,7 @@ resource "aws_s3_object" "decoy_status_key" {
   bucket  = aws_s3_bucket.dev_logs.id
   key     = "status.txt"
   # This looks like some kind of encoded key...
-  content = "FLAG{d3JvbmdfdHJhaWxfdGhlX3JlYWxfY2x1ZV9pc19pbl9hX3B1YmxpY19idWNrZXQ=}"
+  content = "ISCP{d3JvbmdfdHJhaWxfdGhlX3JlYWxfY2x1ZV9pc19pbl9hX3B1YmxpY19idWNrZXQ=}"
 }
 
 # --- REAL FLAG PART 2 CLUE ---
