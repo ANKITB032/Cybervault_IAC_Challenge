@@ -35,8 +35,8 @@ resource "aws_s3_object" "decoy_status_key" {
 
 # --- REAL FLAG PART 2 CLUE ---
 # This object is stored in the public bucket. Its content is the final breadcrumb.
-resource "aws_s3_object" "964afa8" {
+resource "aws_s3_object" "8ba6c76" {
   bucket  = aws_s3_bucket.app_data.id
   key     = "secrets/flag_part_2.txt" # This path matches the clue in compute.tf
-  content = "Key location was moved to the commit history for auditing. The key is now stored as a common hash type. See commit 964afa8 for details."
+  content = "Key location was moved to the commit history for auditing. The key is now stored as a common hash type. See commit 8ba6c76 for details."
 }
